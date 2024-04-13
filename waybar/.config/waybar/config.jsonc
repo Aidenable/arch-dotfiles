@@ -1,0 +1,114 @@
+{
+    "layer": "bottom", 
+    "position": "top", 
+    "height": 20, 
+    "spacing": 4,
+
+    "modules-left": [ ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "bluetooth",
+        "network",
+        "pulseaudio",
+        // "hyprland/language",
+        "battery",
+        "group/group-power"
+    ],
+
+
+    // >> Left Modules
+    // "hyprland/workspaces": {
+    //     "active-only": true,
+    //     "format": "Workspace {name}"
+    // },
+    // << Left Modules
+
+
+    // >> Middle Modules
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%A, %d/%m}",
+        "tooltip": false
+    },
+    // << Middle Modules
+
+
+    // >> Right Modules
+    // >> Power Group
+    "group/group-power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/power",
+            "custom/quit",
+            "custom/lock",
+            "custom/reboot"
+        ]
+    },
+
+    "custom/quit": {
+        "format": "󰿅",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/reboot": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "shutdown now"
+    },
+    // << Power Group
+
+    "battery": {
+        "format": "{icon}",
+        "format-charging": "",
+        "format-plugged": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    // "hyprland/language": {
+	//	 "format": "{shortDescription}",
+	//	 "tooltip": false
+    // },
+
+    "pulseaudio": {
+        "scroll-step": 1, 
+        "format": "{icon}",
+        "format-source-muted": "",
+        "reverse-scrolling": true,
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        "on-click": "alacritty -e nmtui",
+        "tooltip": false,
+        "format-icons": {
+            "wifi": [""],
+            "ethernet": ["󰈁"],
+            "disconnected": ["󰤫"]
+        }
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "on-click": "blueman-manager"
+    }
+    // << Right Modules
+}

@@ -1,0 +1,67 @@
+* {
+    font-family: "Ubuntu", "Font Awesome 5 Free";
+    font-weight: 500;
+}
+
+window#waybar {
+    background: #000000;
+}
+
+#custom-power,
+#custom-reboot,
+#custom-quit {
+    padding: 0 5px;
+    font-size: 16px;
+    color: #A5ACC5;
+}
+
+#battery {
+    padding-left: 6px;
+    padding-right: 10px;
+    font-size: 16px;
+    color: #A5ACC5;
+}
+
+#language {
+    padding: inherit;
+    color: #A5ACC5;
+}
+
+#pulseaudio {
+    padding: 0 8px;
+    color: #A5ACC5;
+}
+
+#network {
+    padding: 0 8px;
+    color: #A5ACC5;
+}
+
+#bluetooth {
+    padding-left: 4px;
+    padding-right: 2px;
+    font-size: 15px;
+    color: #A5ACC5;
+}
+
+#clock {
+    padding: 0 10px;
+    font-weight: 500;
+    color: #A5ACC5;
+}
+
+/* #workspaces button { */
+/*     color: #42444E; */
+/* } */
+/**/
+/* #workspaces button:hover { */
+/*     background: transparent; */
+/*     color: transparent; */
+/*     background-color: transparent; */
+/*     border-color: transparent; */
+/* } */
+
+#custom-power {
+    margin-right: 20px;
+}
+
